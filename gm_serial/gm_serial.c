@@ -25,7 +25,7 @@
 #include "gm_serial.h"
 
 // 串口对象
-struct _gm_serial
+struct _gm_serial_t
 {
     int fd;
     pthread_mutex_t mutex;

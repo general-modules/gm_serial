@@ -23,10 +23,10 @@ extern "C"
 
 #define GM_SERIAL_VERSION_MAJOR 1
 #define GM_SERIAL_VERSION_MINOR 0
-#define GM_SERIAL_VERSION_PATCH 0
+#define GM_SERIAL_VERSION_PATCH 1
 
 // 串口波特率
-typedef enum gm_serial_baud_rate
+typedef enum _gm_serial_baud_rate_e
 {
     E_BAUD_RATE_0 = B0,
     E_BAUD_RATE_50 = B50,
@@ -63,7 +63,7 @@ typedef enum gm_serial_baud_rate
 } gm_serial_baud_rate_e;
 
 // 串口数据位
-typedef enum gm_serial_data_bit
+typedef enum _gm_serial_data_bit_e
 {
     E_DATA_BIT_5 = CS5,
     E_DATA_BIT_6 = CS6,
@@ -72,7 +72,7 @@ typedef enum gm_serial_data_bit
 } gm_serial_data_bit_e;
 
 // 串口奇偶校验位
-typedef enum gm_serial_parity_bit
+typedef enum _gm_serial_parity_bit_e
 {
     E_PARITY_BIT_N = 0, // 无校验
     E_PARITY_BIT_O = 1, // 奇校验
@@ -80,14 +80,14 @@ typedef enum gm_serial_parity_bit
 } gm_serial_parity_bit_e;
 
 // 串口停止位
-typedef enum gm_serial_stop_bit
+typedef enum _gm_serial_stop_bit_e
 {
     E_STOP_BIT_1 = 1,
     E_STOP_BIT_2 = 2,
 } gm_serial_stop_bit_e;
 
 // 串口对象
-typedef struct _gm_serial gm_serial_t;
+typedef struct _gm_serial_t gm_serial_t;
 
 /**
  * @brief 创建串口对象
